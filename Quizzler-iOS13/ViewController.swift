@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
     // Do any additional setup after loading the view.
         
-        print(UILabel("2+4 = 6"))
+        questionLabel.text = "2+4 = 6 ?"
     }
 
     @IBAction func answerButtonPressed(_ sender: UIButton) {
