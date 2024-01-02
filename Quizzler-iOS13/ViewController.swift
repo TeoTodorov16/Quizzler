@@ -15,15 +15,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var trueButton: UIButton!
     @IBOutlet weak var falseButton: UIButton!
     
+    let quiz = [
+        "2+4 = 6 ?",
+        "3+13 = 11 ?",
+        "12-10 = -3 ?"
+    ]
+    
+    var questionNumber = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     // Do any additional setup after loading the view.
         
-        questionLabel.text = "2+4 = 6 ?"
+        updateUI()
+        
+        // questionLabel.text = quiz[0] - Make it more Dynamic
+        //questionLabel.text = "2+4 = 6 ?"
     }
 
     @IBAction func answerButtonPressed(_ sender: UIButton) {
+        questionNumber += 1
+        updateUI()
+    }
+    
+    func updateUI() {
+        questionLabel.text = quiz[questionNumber]
+        
     }
     
 }
