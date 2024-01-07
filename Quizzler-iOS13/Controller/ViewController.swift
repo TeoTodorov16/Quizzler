@@ -48,8 +48,8 @@ class ViewController: UIViewController {
     
     @objc func updateUI() {
         questionLabel.text = quizBrain.getQuestionText()
-        
-        //Need to fetch the answers and update the button titles using the setTitle method. 
+        //Test
+        //Need to fetch the answers and update the button titles using the setTitle method.
         let answerChoices = quizBrain.getAnswers()
         choice1.setTitle(answerChoices[0], for: .normal)
         choice2.setTitle(answerChoices[1], for: .normal)
